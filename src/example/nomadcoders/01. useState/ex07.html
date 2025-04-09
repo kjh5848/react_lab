@@ -12,44 +12,49 @@
     const root = document.getElementById("root")
     function App () {
       const [amount, setAmount] = React.useState()
-      const [flipped, setFlipped] = React.useState(false)
+      const [inverted, setInverted] = React.useState(false)
 
       const onChange =(event)=> setAmount( event.target.value)
       
       const reset =()=> setAmount(0)
       const onFlip =()=> {
         reset()
-        setFlipped((current)=>!current)
+        setInverted((current)=>{
+          const newInverted = !current;
+          console.log("inverted:", newInverted);
+          return newInverted;
+        })
       }
         return(
-        <div>
-          <h1>Super Converter</h1>
           <div>
-            <label htmlFor="minutes">Minutes</label>
-            <input
-            value={flipped ? amount * 60 : amount}
-            id="minutes"
-            placeholder="minutes"
-            type="number"
-            onChange={onChange}
-            disabled={flipped}
-            />  
+            <h1>Super Converter</h1>
+            <div>
+              <label htmlFor="minutes">Minutes</label>
+              <input
+              value={inverted ? amount * 60 : amount}
+              id="minutes"
+              placeholder="minutes"
+              type="number"
+              onChange={onChange}
+              disabled={inverted}
+              
+              />  
           </div>
           
           <h4>확인 {amount}</h4>
           <div>
             <label htmlFor="hours">hours</label>
             <input 
-              value={flipped ? amount : Math.round(amount / 60)}
+              value={inverted ? amount : Math.round(amount / 60)}
               id="hours"
               placeholder="hours"
               type="number"
               onChange={onChange}
-              disabled={!flipped}
+              disabled={!inverted}
               />
           </div>
           <button onClick={reset}> reset</button>
-          <button onClick={onFlip}> Flip</button>
+          <button onClick={onFlip}> {inverted ? "돌아가" : "반전"}</button>
         </div>
 
     )}
