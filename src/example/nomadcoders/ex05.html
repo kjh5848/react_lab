@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<body>
+  <div id="root">
+
+  </div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root")
+    let counter = 0;
+
+
+    function App () {
+      const [minutes, setMinutes] = React.useState()
+      const onChange =(event)=> {
+          setMinutes( event.target.value)
+      }
+      return(
+        <div>
+          <h1>Super Converter</h1>
+          <label htmlFor="minutes">Minutes</label>
+          <input
+            value={minutes}
+            id="minutes"
+            placeholder="minutes"
+            type="number"
+            onChange={onChange}
+            />
+            <h4>확인 {minutes}</h4>
+          <label hemlFor="hours">hours</label>
+          <input 
+            id="hours"
+            placeholder="hours"
+            type="number"
+            />
+        </div>
+    )}
+         ReactDOM.render(<App />, root);
+</script>
+</html>

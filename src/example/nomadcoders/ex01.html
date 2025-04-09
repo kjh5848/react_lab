@@ -11,43 +11,29 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     const root = document.getElementById("root")
-    const Title = () => (
-        <h3 
-        id="title"
-        onMouseEnter= {() => console.log("마우스 엔터")}
-        > 
-        마우스 엔터 </h3>
+    
+    const h3 = React.createElement(
+        "h3",
+        {
+            onMouseEnter: () => console.log("마우스 엔터")
+        },
+        "마우스 엔트"
     )
-    // const h3 = React.createElement(
-    //     "h3",
-    //     {
-    //         onMouseEnter: () => console.log("마우스 엔터")
-    //     },
-    //     "마우스 엔트"
-    // )
-    const Btn = () => (
-        <button
-        onClick={()=> console.log("클릭")}
-        style={{backgroundColor : "tomato"}}
-        >
-        클릭
-        </button>
+    
+    const btn = React.createElement(
+        "button",
+        {
+        onClick: ()=> console.log("클릭"),
+        style: {
+            backgroundColor : "tomato"
+        }
+        }, 
+        "클릭"
     )
-    // const btn = React.createElement(
-    //     "button",
-    //     {
-    //     onClick: ()=> console.log("클릭"),
-    //     style: {
-    //         backgroundColor : "tomato"
-    //     }
-    //     }, 
-    //     "클릭"
-    // )
-    const Container = () => (
-        <div>
-        <Title />
-        <Btn />
-        </div>
+    const Container = React.createElement(
+      "div",
+      null,
+      [h3,btn]
     )
   ReactDOM.render(<Container />, root);
 </script>

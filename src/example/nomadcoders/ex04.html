@@ -13,7 +13,8 @@
     const root = document.getElementById("root")
     let counter = 0;
     function countUp(){
-
+        setCounter(counter +  1)  
+        setCounter( (current) => current + 1)//이 방법이 좀더 안전한 방법 변경할려는 현재의 값을 알려준다.
     }
 
     function App () {
