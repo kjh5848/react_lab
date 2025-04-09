@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<body>
+  <div id="root">
+
+  </div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root")
+    //인자는 props를 넣어도 되고 또는 아래처럼 하나씩 객체를 받아도 된다.
+    function Btn ({text,big}) {
+          
+      return (
+        <button
+          style={{
+            backgroundColor: "tomato",
+            color:"white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+            fontSize: big ? 18:16
+          }}
+        >
+          {text}
+        </button>
+      )
+    }
+    
+    function App () {
+      return(
+        <div>
+          <Btn text="저장" big={true}/>
+          <Btn text="계속" big={false}/>
+        </div>
+    )}
+    ReactDOM.render(<App />, root);
+</script>
+</html>
