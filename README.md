@@ -64,3 +64,12 @@
 
     ### 06. MovieApp/02. ReactRouter
     - useParams로 movie:id에 오는 id값을 확인하고 값을 가져온다.
+
+
+    ### package.json
+    - 해당 파일에서는 github.io로 무료 페이지를 만들어 배포하는 방법을 배운다.
+    - script에 
+    "deploy": "gh-pages -d build",
+    "predeploy" : "npm run build"
+    해당 명령어 추가 
+    - 마지막 homepage 에는 "homepage": "https://kjh5848.github.io/react_lab" 자신의 계정과 레포지토리를 조합해서 적어준다.
