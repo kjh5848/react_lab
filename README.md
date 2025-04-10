@@ -2,7 +2,6 @@
 - npm install react@latest react-dom@latest
 
 
-
 # React_Lab
 ## Example/nomadcoders
 - 해당 폴더는 노마드 코더에서 배우고 있는 ReactJS로 영화 웹앱 만들기를 따라하고 기록하는 중이다.
@@ -50,4 +49,17 @@
 
     ### 04. To Do list/PartTwo
     - map을 통해 ToDoList가 나오는 걸 확인하고 직접 ToDoList를 구현할 수 있다.
-    
+
+    ### 05. coin Tracker/CoinTracker
+    - 코인 리스트를 주는 api를 통해 코인을 받고 useEffect와 map을 통해서 바인딩을 해본다.
+
+    ### 06. MovieApp/PartOne
+    - 영화 api를 통해 데이터를 가공하는 법을 배운다. async/await에 대해서 알고 사용법을 배운다. 
+
+    ### 06. MovieApp/PartTwo
+    - 영화 api를 가공한 부분을 컴포넌트로 빼서 관리하는 방법을 배운다. props를 통해 내가 만든 태그에 자식을 넘겨주어 값을 관리하 할 수 있다. 또한, 그 다음 강의는 리액트 라우터를 통해 페이지 전환하는 법을 진행해 본다.
+
+    ### 06. MovieApp/ReactRouter
+    - npm install react-router-dom 으로 설치,  React Router로 페이지를 전환하는 방법을 배운다. 새로고침 없이 바로 페이지를 이동한다.
+
+
