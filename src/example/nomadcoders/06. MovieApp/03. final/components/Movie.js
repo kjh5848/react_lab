@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import style from "../components/Movie.module.css"
+import style from "./Movie.module.css"
 
 const Movie = ({ id, coverImg, title, summary, genres, year }) => {
   return (

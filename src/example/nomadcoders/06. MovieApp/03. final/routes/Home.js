@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movie from "../components/Movie";
-import styles from "../routes/Home.module.css";
+import styles from "./Home.module.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
