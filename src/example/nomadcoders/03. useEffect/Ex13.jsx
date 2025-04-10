@@ -26,7 +26,7 @@ function HelloV2() {
   return <h1>Hello</h1>;
 }
 
-function App() {
+function Ex13() {
   const [showing, setShowing] = useState(false)
 
   const onClick = () => { setShowing((prev) => !prev) }
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Ex13;
