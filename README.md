@@ -59,7 +59,8 @@
     ### 06. MovieApp/PartTwo
     - 영화 api를 가공한 부분을 컴포넌트로 빼서 관리하는 방법을 배운다. props를 통해 내가 만든 태그에 자식을 넘겨주어 값을 관리하 할 수 있다. 또한, 그 다음 강의는 리액트 라우터를 통해 페이지 전환하는 법을 진행해 본다.
 
-    ### 06. MovieApp/ReactRouter
+    ### 06. MovieApp/01. ReactRouter 
     - npm install react-router-dom 으로 설치,  React Router로 페이지를 전환하는 방법을 배운다. 새로고침 없이 바로 페이지를 이동한다.
 
-
+    ### 06. MovieApp/02. ReactRouter
+    - useParams로 movie:id에 오는 id값을 확인하고 값을 가져온다.
