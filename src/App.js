@@ -1,40 +1,35 @@
-import React, { useState, useEffect } from "react";
-
-function HelloV1() {
-  useEffect(() => {
-    console.log("여기야")
-  
-    return () => {
-      console.log("죽음.")
-    }
-  }, [])
-  return<h1>Hello</h1>
-}
-
-function HelloV2() {
-  function hiFn() {
-    console.log("hi")
-    return byFn;
-  }
-
-  function byFn() {
-    console.log("bye")
-    return <h1>bye</h1>;
-  }
-  
-  useEffect(hiFn, []);
-  return <h1>Hello</h1>;
-}
+import React, { useState } from "react";
 
 function App() {
-  const [showing, setShowing] = useState(false)
-
-  const onClick = () => { setShowing((prev) => !prev) }
-
+  const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState([]);
+  
+  const onChange = (event) => setToDo(event.target.value);
+  
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(toDo);
+    if(toDo === ""){
+      return;
+    }
+    setToDos((currentArray) => [toDo, ...currentArray]);
+    setToDo("");
+    
+  };
+console.log(toDos)
   return (
     <div>
-      {showing ? <HelloV1 /> : null}
-      <button onClick={onClick}>{showing ? "hide" : "show"}</button>
+      <h1>My To Dos ({toDos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input onChange={onChange} value={toDo} placeholder="여기에 작성" />
+        <button>Add to toDo</button>
+      </form>
+      <hr />
+      <ul>
+        {toDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }

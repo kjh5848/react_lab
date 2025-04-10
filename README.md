@@ -1,3 +1,8 @@
+## React 최신 버전으로 업데이트 권장
+- npm install react@latest react-dom@latest
+
+
+
 # React_Lab
 ## Example/nomadcoders
 - 해당 폴더는 노마드 코더에서 배우고 있는 ReactJS로 영화 웹앱 만들기를 따라하고 기록하는 중이다.
@@ -34,9 +39,15 @@
      ### 02. props/ex11
      - propType을 통해 props의 타입을 정할 수 있다. 해당 만약 text에 문자열이 아니라 숫자를 넣는다면? 당연히 아무런 타입이 없기 때문에 실제 ui에서는 오류가 나지 않는다. 하지만 proptype을 통해 타입을 정하면 콘솔에서 오류를 확인할 수 있다.
 
-       ### 03. useEffect/Ex12
-       - 가령 api 요청이 useState가 일어날때마다 리렌더링이 일어나서 계속 api요청이 된다면 어떻게 될까? 렌더링을 한번만 되게 하는 useEffect를 통해 반복적으로 실행되는 렌더링을 컨트롤하고 원하는 값이 변경될때만 렌더링을 하는 방법도 배워보자.
+    ### 03. useEffect/Ex12
+    - 가령 api 요청이 useState가 일어날때마다 리렌더링이 일어나서 계속 api요청이 된다면 어떻게 될까? 렌더링을 한번만 되게 하는 useEffect를 통해 반복적으로 실행되는 렌더링을 컨트롤하고 원하는 값이 변경될때만 렌더링을 하는 방법도 배워보자.
 
+    ### 03. useEffect/Ex13
+    - useEffet의 생명주기를 확인한다. 보통 생명주기를 넣어주지는 않지만 넣어줄때도 있다. 두가지의 방법을 보고 생명주기를 어떻게 확인하는지에 대한 방법을 배운다.
 
-        ### 03. useEffect/Ex13
-        - useEffet의 생명주기를 확인한다. 보통 생명주기를 넣어주지는 않지만 넣어줄때도 있다. 두가지의 방법을 보고 생명주기를 어떻게 확인하는지에 대한 방법을 배운다.
+    ### 04. To Do list/PartOne
+    - 배원던 내용을 토대로 ToDolist를 만들어본다. '...element'(스프레드)를 통해 값을 업데이트 해보는 방법을 배운다. 
+
+    ### 04. To Do list/PartTwo
+    - map을 통해 ToDoList가 나오는 걸 확인하고 직접 ToDoList를 구현할 수 있다.
+    
